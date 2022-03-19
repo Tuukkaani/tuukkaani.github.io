@@ -1,0 +1,263 @@
+/* TIDY BIDY WRAPPING YABBIN */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    color: #FAF7FF;
+    
+    background-color: #0F0F0F;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* NAVBAR */
+
+.navbar {
+    flex-basis: 100%;
+    /*background: lightseagreen;*/
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+    padding-top: 35px;
+    padding-right: 150px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.navbar li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 25px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar li:hover {
+    transform: translateY(-4px);
+}
+
+.current a {
+    color: #8685EF;
+}
+
+/* LEFT SIDE CONTENT */
+
+.side-left {
+    flex-basis: 50%;
+    flex: auto;
+    /*background: lightcoral;*/
+    font-size: 126px;
+}
+
+.firstname {
+    font-weight: 300;
+    padding-top: 50px;
+    padding-left: 60px;
+}
+
+.lastname {
+    font-weight: 600;
+    position: relative;
+    top: -70px;
+    left: 290px;
+}
+
+.buttons {
+    padding-top: 25px;
+}
+
+button:hover {
+    color: #FAF7FF;
+    box-shadow: 0 1px 10px #8685EF;
+}
+
+button {
+    transition: all 0.2s ease-in-out;
+    background-color: #111111;
+    border-radius: 100px 100px 100px 100px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.btn-download {
+    margin-right: 50px;
+    margin-left: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.btn-contact {
+    margin-left: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* RIGHT SIDE CONTENT */
+
+.side-right {
+    flex-basis: 50%;
+    /*background: lightgreen;*/
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    object-fit: fill;
+    padding-top: 50px;
+    width: 800px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1900px) {
+
+    .navbar {
+        flex-direction: row;
+    }
+    
+    .side-right {
+        display: none;
+    }
+
+    .side-left {
+        padding-bottom: 150px;
+    }
+
+}
+
+/* BIGBOI SCREEN */
+
+@media only screen and (max-width: 1200px) {
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        padding-top: 35px;
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: 600;
+    }
+    
+    .side-right {
+        display: none;
+    }
+
+    .lastname {
+        position: unset;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+    }
+
+    .btn-download {
+        margin-left: 0px;
+    }
+
+}
+
+/* MEDIUM SIZE SCREEN */
+
+@media only screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        padding-top: 35px;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .btn-download {
+        margin-right: 40px;
+        margin-left: 0px;
+    }
+
+    .btn-contact {
+        margin-left: 25px;
+    }
+   
+    .navbar li {
+        padding: 0 20px;
+    }
+}
+
+/* SMÅL SCREEN */
+
+@media only screen and (max-width: 600px) {
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        padding-top: 35px;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    button {
+        font-size: 30px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-contact {
+        margin-left: 25px;
+    }
+
+    .btn-download {
+        margin-right: 25px;
+        margin-left: 0px;
+    }
+
+    .firstname {
+        font-size: 86px;
+    }
+
+    .navbar li {
+        padding: 0 15px;
+    }
+}
+
+
