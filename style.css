@@ -50,8 +50,64 @@
     padding-top: 3em;
 }
 
+.main-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .main p {
     font-size: 3.25em;
+}
+
+.about p {
+    font-size: 1em; 
+    padding-bottom: 1em;
+}
+
+.education {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.skills {
+    flex-basis: 100%;
+}
+.about {
+    flex-basis: 100%;
+}
+
+.education ul {
+    font-size: 1em;
+    padding-bottom: 1em; 
+}
+
+h1 {
+    font-size: 2em;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0em;
+}
+
+hr {
+    border-top: 2px solid #FAF7FF;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.skills p {
+    font-size: 1em; 
+    padding-bottom: 1em;
+}
+
+.skills {
+    padding-bottom: 1em;
 }
 
 .firstname {
@@ -82,10 +138,18 @@ button {
     background-color: #0F0F0F;
     box-shadow: 0 1px 4px #8685EF;
     color: #FAF7FF;
+    overflow: hidden;
     font-size: 2em;
     font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
 }
 
+button:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+  
 .btn-download {
     padding-top: 0.3em;
     padding-bottom: 0.3em;
@@ -150,6 +214,22 @@ button {
         padding-top: 8em;
         flex-direction: row;
     }
+    article {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .skills p{
+        font-size: 2em;
+    }
+    .about p{
+        font-size: 2em;
+    }
+    .education ul{
+        font-size: 2em;
+    }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -199,11 +279,11 @@ button {
         justify-content: right;
         padding-right: 7em;
     }
-    html, body {
+    /*html, body {
         margin: 0; 
         height: 100%; 
         overflow: hidden
-    }
+    }*/
     .left-side {
         display: flex;
         grid-template-columns: none;
@@ -246,5 +326,19 @@ button {
         object-fit: contain;
         max-width: 100%;
         max-height: 100%;
+    }
+    .main-about {
+        flex-direction: row;
+    }
+    .about {
+        flex-basis: 55%;
+        padding-bottom: 3em;
+    }
+    .education {
+        flex-basis: 30%;
+        padding-right: 5em;
+    }
+    .skills {
+        flex-basis: 30%;
     }
 }
