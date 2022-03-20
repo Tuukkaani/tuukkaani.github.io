@@ -1,42 +1,31 @@
-/* TIDY BIDY WRAPPING YABBIN */
-
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Cairo', sans-serif;
     color: #FAF7FF;
-    
     background-color: #0F0F0F;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
 }
 
 /* NAVBAR */
 
 .navbar {
-    flex-basis: 100%;
-    /*background: lightseagreen;*/
-}
-
-.navbar ul {
     display: flex;
-    justify-content: right;
-    padding-top: 35px;
-    padding-right: 150px;
-    font-size: 36px;
-    font-weight: 600;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    gap: 1.25em;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
 }
 
 .navbar li {
     list-style: none;
-    display: inline-block;
-    padding: 0 25px;
     transition: all 0.2s ease-in-out;
+    font-size: 24px;
+    flex-shrink: 1;
+    font-weight: 600;
 }
 
 .navbar a {
@@ -51,208 +40,211 @@
     color: #8685EF;
 }
 
-/* LEFT SIDE CONTENT */
+/* Main container */
 
-.side-left {
-    flex-basis: 50%;
-    flex: auto;
-    /*background: lightcoral;*/
-    font-size: 126px;
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    padding-top: 3em;
+}
+
+.main p {
+    font-size: 3.25em;
 }
 
 .firstname {
     font-weight: 300;
-    padding-top: 50px;
-    padding-left: 60px;
 }
 
 .lastname {
     font-weight: 600;
-    position: relative;
-    top: -70px;
-    left: 290px;
+    padding-left: 1.75em;
 }
+
+/* Buttons */
 
 .buttons {
-    padding-top: 25px;
-}
-
-button:hover {
-    color: #FAF7FF;
-    box-shadow: 0 1px 10px #8685EF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.75em;
+    padding-top: 4em;
+    flex-direction: column;
 }
 
 button {
-    transition: all 0.2s ease-in-out;
-    background-color: #111111;
     border-radius: 100px 100px 100px 100px;
     text-decoration: none;
     text-align: center;
-    border: none;
-    font-size: 36px;
+    border: 2px solid #8685EF;
+    background-color: #0F0F0F;
+    box-shadow: 0 1px 4px #8685EF;
+    color: #FAF7FF;
+    font-size: 2em;
     font-weight: 300;
 }
 
 .btn-download {
-    margin-right: 50px;
-    margin-left: 200px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 35px;
-    padding-left: 35px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .btn-contact {
-    margin-left: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 2.1em;
+    padding-right: 2.1em;
 }
 
-/* RIGHT SIDE CONTENT */
-
-.side-right {
-    flex-basis: 50%;
-    /*background: lightgreen;*/
-    display: flex;
-    justify-content: center;
+.right-side{
+    display: none;
 }
 
-img {
-    object-fit: fill;
-    padding-top: 50px;
-    width: 800px;
-    z-index: 1;
-}
+/*                                     */
+/* WARNING MESS A HEAD (MEDIA QUERIES) */
+/* WARNING MESS A HEAD (MEDIA QUERIES) */
+/*                                     */
 
-@media only screen and (max-width: 1900px) {
 
+/* Special snowflakes */
+@media only screen and (max-width: 300px) {
     .navbar {
-        flex-direction: row;
+        gap: .5em;
     }
-    
-    .side-right {
-        display: none;
+    .navbar li {
+        font-size: 1.25em;
+
     }
-
-    .side-left {
-        padding-bottom: 150px;
-    }
-
-}
-
-/* BIGBOI SCREEN */
-
-@media only screen and (max-width: 1200px) {
-
-    .navbar {
-        flex-direction: row;
-    }
-
-    .navbar ul {
-        justify-content: center;
-        padding-top: 35px;
-        padding-left: 0;
-        padding-right: 0;
-        font-weight: 600;
-    }
-    
-    .side-right {
-        display: none;
-    }
-
     .lastname {
-        position: unset;
-        display: flex;
-        justify-content: center;
-    }
-
-    .buttons {
-        display: flex;
-        justify-content: center;
-        padding-top: 100px;
-    }
-
-    .btn-download {
-        margin-left: 0px;
-    }
-
-}
-
-/* MEDIUM SIZE SCREEN */
-
-@media only screen and (max-width: 768px) {
-
-    .navbar {
-        flex-direction: row;
-    }
-
-    .navbar ul {
-        justify-content: center;
-        padding-top: 35px;
-        padding-left: 0;
-        padding-right: 0;
-        font-size: 36px;
         font-weight: 600;
+        padding-left: 0em;
     }
-
-    .btn-download {
-        margin-right: 40px;
-        margin-left: 0px;
-    }
-
-    .btn-contact {
-        margin-left: 25px;
-    }
-   
-    .navbar li {
-        padding: 0 20px;
-    }
-}
-
-/* SMÅL SCREEN */
-
-@media only screen and (max-width: 600px) {
-
-    .navbar {
-        flex-direction: row;
-    }
-
-    .navbar ul {
-        justify-content: center;
-        padding-top: 35px;
-        padding-left: 0;
-        padding-right: 0;
-        font-size: 30px;
-        font-weight: 600;
-    }
-
     button {
-        font-size: 30px;
+        font-size: 1.75em;
     }
 
-    .buttons {
-        display: flex;
-        justify-content: center;
-    }
+}
 
-    .btn-contact {
-        margin-left: 25px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        gap: 3em;
     }
-
-    .btn-download {
-        margin-right: 25px;
-        margin-left: 0px;
-    }
-
-    .firstname {
-        font-size: 86px;
-    }
-
     .navbar li {
-        padding: 0 15px;
+        font-size: 3em;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .main p {
+        font-size: 7em;
+    }
+    button {
+        font-size: 2.5em;
+    }
+    .buttons {
+        padding-top: 8em;
+        flex-direction: row;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .navbar {
+        padding-bottom: 1em;
+        gap: 4em;
+    }
+    .navbar li {
+        font-size: 2.8em;
+    }
+    
+    .main {
+        padding-right: 0;
+    }
+    .left-side {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: end;
+        align-items: center;
+        justify-items: center;
+    }
+    .right-side {
+        display: none;
+    }
+    .name {
+        padding-right: 0em;
+    }
+    .main p {
+        font-size: 5.5em;
+    }
+    button {
+        font-size: 2.1em;
+    }
+    .buttons {
+        gap: 4em;
+        padding-top: 0;
+        padding-left: 1em;
+    }
+    .lastname {
+        padding-left: 0;
     }
 }
 
-
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .navbar {
+        justify-content: right;
+        padding-right: 7em;
+    }
+    html, body {
+        margin: 0; 
+        height: 100%; 
+        overflow: hidden
+    }
+    .left-side {
+        display: flex;
+        grid-template-columns: none;
+        justify-content: flex-start;
+        align-items: center;
+        justify-items: start;
+        flex-direction: column;
+    }
+    .firstname {
+        padding-right: 2em;
+    }
+    .lastname {
+        padding-left: 2em;
+    }
+    .main p {
+        font-size: 8em;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: left;
+        padding-left: 0em;
+    }
+    .buttons {
+        flex-direction: row;
+        padding-top: 8em;
+        padding-left: 0em;
+        justify-content: left;
+        gap: 6.5em;
+    }
+    button {
+        font-size: 2.5em;
+    }
+    .right-side {
+        display: flex;
+        grid-column: 2 / 2;
+        justify-content: center;
+    }
+    img {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
