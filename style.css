@@ -60,6 +60,8 @@
     font-size: 3.25em;
 }
 
+/* About Page */
+
 .about p {
     font-size: 1em; 
     padding-bottom: 1em;
@@ -119,6 +121,46 @@ hr {
     padding-left: 1.75em;
 }
 
+
+/* Portfolio gallery */
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+div.gallery-item {
+    margin: 5px;
+    float: left;
+    width: 150px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  div.gallery-item:hover {
+    transform: scale(1.02);
+  }
+  
+  div.gallery-item img {
+    border: 3px solid #FAF7FF;
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 0em 1em 1em 1em;
+    text-align: center;
+    font-size: 1em;
+  }
+
 /* Buttons */
 
 .buttons {
@@ -164,6 +206,11 @@ button:hover {
     padding-right: 2.1em;
 }
 
+a {
+    text-decoration-style: none;
+    text-decoration: none;
+}
+
 .right-side{
     display: none;
 }
@@ -201,6 +248,13 @@ button:hover {
     .navbar li {
         font-size: 3em;
     }
+    .gallery {
+        gap: 3em;
+    }
+    div.gallery-item {
+        width: 300px;
+        font-size: 2em;
+      }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -284,6 +338,17 @@ button:hover {
         height: 100%; 
         overflow: hidden
     }*/
+
+    .gallery{
+        justify-content: space-evenly;
+    } 
+
+    .head {
+        font-size: 2em;
+        justify-content: left;
+        padding-left: 1em;
+    }
+
     .left-side {
         display: flex;
         grid-template-columns: none;
